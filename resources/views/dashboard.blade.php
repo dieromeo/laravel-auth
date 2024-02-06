@@ -15,6 +15,9 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+                        <div>
+                            <a href="/admin/project" class="btn btn-primary">Visualizza progetti</a>
+                        </div>
                     </div>
                 </div>
             </div>
