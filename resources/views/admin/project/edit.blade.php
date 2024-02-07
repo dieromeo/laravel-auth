@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form action={{ route('admin.project.update', $project->id) }} method="POST" class="d-flex row p-4">
+        <form action={{ route('admin.project.update', $project) }} method="POST" class="d-flex row p-4">
             @csrf
             @method('PUT')
             <div class="mb-3 col-6">
