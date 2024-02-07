@@ -2,15 +2,7 @@
 @section('content')
     <div class="container">
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        @include('partials.errors')
 
         <form action={{ route('admin.project.update', $project) }} method="POST" class="d-flex row p-4">
             @csrf

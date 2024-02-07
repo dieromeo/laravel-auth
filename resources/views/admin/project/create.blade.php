@@ -1,16 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-    <div class="container">
+    <div class="container py-4">
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        @include('partials.errors')
 
         <form action={{ route('admin.project.store') }} method="POST" class="d-flex row">
             @csrf
